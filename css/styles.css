@@ -1,0 +1,288 @@
+ /* Grundläggande styling för hela dokumentet */
+ html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* Styling för navigeringslänkar */
+.header-nav > li, a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    padding-right: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header-nav li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling för headern */
+.site-header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    box-shadow: 0px 1px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1000;
+}
+
+/* Styling för den övre delen av headern */
+.header-top {
+    margin: 10px;
+    flex-grow: 1;
+    justify-content: left;
+    padding-top: 5px;
+}
+
+/* Styling för logotypen i headern */
+.header-logo img {
+    width: 500px;
+    height: 100%;
+}
+
+/* Styling för sökformuläret i headern */
+.header-form input {
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 200px;
+    height: 25px;
+    padding-left: 25px; /* Utrymme för sökikon */
+    text-transform: uppercase;
+}
+
+.header-form input::placeholder {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+.header-form img {
+    position: absolute;
+    top: 3px;
+    right: 203px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Styling för header-ikoner */
+.header-icons {
+    display: flex;
+    position: absolute;
+    right: 10px;
+}
+
+.header-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Styling för SVG-ikoner i headern */
+.header-icons-svg {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 23px;
+}
+
+.header-icons-svg img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Styling för navigeringsbaren i headern */
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling för Call To Action-sektionen */
+.cta-container {
+    padding-top: 500px;
+    background-color: red;
+}
+
+.cta-container p {
+    font-size: 1em;
+}
+
+/* Styling för slideshow-container */
+.slideshow-container {
+    display: flex;
+}
+
+.slideshow-container img {
+    width: 500px;
+    height: 100%;
+}
+
+/* Styling för container-layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px; /* Lagt till max-bredd för responsivitet */
+    margin: 0 auto; /* Centrera containern horisontellt */
+    padding-top: 180px;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 25%;
+    
+}
+
+/* Styling för text-boxen inom containern */
+.text-box {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    color: #ce3b3b;
+}
+
+.text-box p {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+/* Styling för bild-boxen inom containern */
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Placeholder för bildens aspektförhållande */
+.placeholder {
+    width: 100%;
+    height: 250px;
+    padding-bottom: 56.25%; /* 16:9 aspektförhållande */
+    position: relative;
+}
+
+.placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Styling för knappen inom text-boxen */
+.text-box button {
+    border: none;
+    border-radius: 2px;
+    background-color: #201f1f;
+    color: white;
+    padding: 10px 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Styling för pre-container */
+.pre-container {
+    background: rgb(226, 226, 226);
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-items {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+padding-top: 50px;
+padding-bottom: 50px;
+flex-direction: row-reverse;
+gap: 80px;
+}
+
+.item-link {
+display: flex;
+width: 100%; /* Make sure it takes the full width of the container */
+height: 300px; /* Fixed height for each item */
+position: relative;
+overflow: hidden;
+text-decoration: none; /* Remove underline from links */
+align-items: center;
+}
+
+.item-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); /* Center text */
+color: white; /* Text color */
+text-align: center;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+}
+
+.item-link img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block; /* Remove space below image */
+}
+
+/* Optional: Add hover effect */
+.item-link:hover .item-content {
+background: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Responsiva justeringar för mobila enheter */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-box {
+        padding: 20px 0;
+    }
+
+    .image-box {
+        margin-top: 20px;
+    }
+}
